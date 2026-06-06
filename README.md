@@ -390,5 +390,6 @@ Evaluación de uplift modeling para campañas personalizadas
 
 # 👨‍💻 Autor
 
-Proyecto desarrollado como práctica final de modelado de datos ML.#   M o d e l o - d e - F i d e l i z a c i o n - y - R e c o m p r a  
+Proyecto desarrollado como práctica final de modelado de datos ML.#   M o d e l o - d e - F i d e l i z a c i o n - y - R e c o m p r a 
+ 
  
