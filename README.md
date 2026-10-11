@@ -9,7 +9,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 
-## 1. 📌 Descripción del proyecto
+## 1. Descripción del proyecto
 
 Este proyecto desarrolla un modelo de Machine Learning para predecir la probabilidad de recompra de clientes en un negocio de retail online, utilizando el dataset Online Retail II.
 
@@ -31,7 +31,7 @@ El proyecto cubre todo el pipeline de ciencia de datos:
 - Explicabilidad con DALEX
 - Evaluación de negocio
 
-## 2. 📂 Dataset
+## 2. Dataset
 
 El dataset contiene transacciones históricas de una empresa de retail online entre **2009 y 2011**. Cada registro representa una línea de factura con información sobre:
 
@@ -42,7 +42,7 @@ El dataset contiene transacciones históricas de una empresa de retail online en
 - País
 - Cliente
 
-## 🎯 Variable objetivo
+## Variable objetivo
 
 `is_rebuyer` Variable binaria que representa:
 
@@ -51,7 +51,7 @@ El dataset contiene transacciones históricas de una empresa de retail online en
 
 Tasa de recompra observada: 52.75%
 
-## 3. 🧹 Data Cleaning
+## 3. Data Cleaning
 
 Objetivo: Depurar el dataset para garantizar calidad y consistencia.
 
@@ -64,7 +64,7 @@ Acciones realizadas:
 - Conversión de tipos
 - Optimización de memoria
 
-📊 Visualizaciones
+Visualizaciones
 
 ![Distribución variables continuas](output/raw1_distribucion_variables_continuas_discretas_log.png)
 
@@ -96,7 +96,7 @@ Este análisis resume la concentración de categorías en variables categóricas
 Esta información es útil para decidir si conviene agrupar categorías, generar dummies o aplicar técnicas de reducción de dimensionalidad.
 
 
-## 4. 🧪 Exploratory Data Analysis (EDA)
+## 4. Exploratory Data Analysis (EDA)
 
 Objetivo: Comprender patrones de compra, comportamiento del cliente y relaciones entre variables.
 
@@ -166,7 +166,7 @@ El mapa de calor muestra las correlaciones entre `Quantity`, `Price` y `Revenue`
 
 Este análisis ayuda a entender la estructura del negocio y a anticipar qué variables podrían tener mayor impacto en el modelo.
 
-## 5.🏗️ Feature Engineering
+## 5. Feature Engineering
 
 Variables generadas:
 
@@ -179,7 +179,7 @@ Variables generadas:
 - País (Top 5 + Otros)
 - Variables temporales
 
-## 6. 🎯 Target Construction
+## 6. Target Construction
 
 Validación temporal: 
 
@@ -198,7 +198,7 @@ Aunque existe una ligera mayoría de clientes que recompran, la distribución es
 Este equilibrio facilita el entrenamiento de modelos de clasificación sin introducir sesgos significativos.
 
 
-## 7. 🤖 Modelado Predictivo
+## 7. Modelado Predictivo
 
 Se entrenaron y compararon tres modelos:
 
@@ -234,7 +234,7 @@ Las curvas ROC permiten evaluar la capacidad de cada modelo para distinguir entr
 
 Este análisis confirma que los tres modelos son útiles, pero Logistic Regression ofrece la mejor capacidad discriminativa.
 
-## 8. 🔍 Optimización de Hiperparámetros (Optuna)
+## 8. Optimización de Hiperparámetros (Optuna)
 
 Se utilizó Optuna para maximizar el AUC ROC mediante búsqueda bayesiana. El objetivo de la optimización será maximizar el AUC, ya que es la métrica más adecuada para problemas de clasificación con clases balanceadas o ligeramente desbalanceadas.
 
@@ -252,7 +252,7 @@ Características.
 
 **Mejor AUC:** 0.81
 
-## 9. 🧠 Explicabilidad del Modelo (DALEX + SHAP)
+## 9. Explicabilidad del Modelo (DALEX + SHAP)
 
 La explicabilidad es fundamental en proyectos de Machine Learning aplicados al negocio retail, ya que permite:
 
@@ -266,7 +266,7 @@ La explicabilidad es fundamental en proyectos de Machine Learning aplicados al n
 
 Para este proyecto utilizamos DALEX, una librería especializada en explicabilidad global y local.
 
-🔍 Importancia global
+Importancia global
 
 ![Importancia variables](output/dalex1_importancia_variables.png)
 
@@ -278,7 +278,7 @@ Este gráfico muestra la importancia de cada variable en el modelo optimizado, m
 
 Este análisis ayuda a comprender qué factores impulsan el comportamiento de recompra y facilita la toma de decisiones estratégicas.
 
-📉 Efectos individuales (ALE)
+Efectos individuales (ALE)
 
 ![Efectos recency](output/dalex2_efectos_individuales_recency.png)
 
@@ -290,7 +290,7 @@ El perfil agregado muestra cómo cambia la predicción del modelo a medida que v
 
 Este análisis permite interpretar el modelo de forma intuitiva y validar que su comportamiento es coherente con la lógica del negocio.
 
-🔍 Explicación local (Break Down)
+Explicación local (Break Down)
 
 ![Explicación local](output/dalex3_explicacion_local.png)
 
@@ -303,7 +303,7 @@ Este gráfico descompone la predicción de un cliente específico, mostrando có
 
 Este tipo de análisis es clave para justificar decisiones personalizadas en marketing o CRM.
 
-📉 Distribución de residuos
+Distribución de residuos
 
 ![Desempeño modelo](output/dalex4_desempeno_modelo.png)
 
@@ -315,7 +315,7 @@ Este gráfico muestra la distribución acumulada inversa de los valores absoluto
 
 Este análisis complementa las métricas tradicionales y permite evaluar la estabilidad del modelo en diferentes rangos de error.
 
-## 10. 🧾 Conclusiones
+## 10. Conclusiones
 
 El modelo logra una capacidad predictiva sólida (AUC ≈ 0.81).
 
@@ -327,7 +327,7 @@ Logistic Regression ofrece el mejor equilibrio entre interpretabilidad y rendimi
 
 DALEX permite justificar decisiones de marketing basadas en el modelo.
 
-## 11. 🚀 Próximos pasos
+## 11. Próximos pasos
 
 Integración del modelo en campañas de marketing automatizadas
 
@@ -337,7 +337,7 @@ Inclusión de variables de comportamiento web
 
 Evaluación de uplift modeling para campañas personalizadas
 
-# 📁 Estructura del proyecto
+# Estructura del proyecto
 ```
 .
 ├── data
@@ -368,7 +368,7 @@ Evaluación de uplift modeling para campañas personalizadas
 
 ---
 
-# 🛠️ Tecnologías
+# Tecnologías
 
 - Python
 - Pandas & NumPy
@@ -382,12 +382,12 @@ Evaluación de uplift modeling para campañas personalizadas
 
 ---
 
-# ⭐ Key Takeaway
+# Key Takeaway
 
 > Entender los datos es más importante que aplicar algoritmos complejos sin análisis previo.
 
 ---
 
-# 👨‍💻 Autor
+# Autor
 
 Proyecto desarrollado como práctica final de modelado de datos ML.
