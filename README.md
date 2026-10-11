@@ -1,4 +1,4 @@
-# 📦 Online Retail — Predicción de Recompra de Clientes
+# Online Retail — Predicción de Recompra de Clientes
 
 ![Python](https://img.shields.io/badge/Python-3.14.5-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow)
